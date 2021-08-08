@@ -1,0 +1,17 @@
+{
+  "name": "reportsapp",
+  "version": "1.0.0",
+  "engines": {
+    "node": "^14.0.0"
+  },
+  "scripts": {
+    "setup": "yarn && cd server && yarn && cd ../client && yarn && cd ..",
+    "start": "cd server && yarn start",
+    "watch": "concurrently \"cd server && yarn watch\" \"cd client && yarn watch\"",
+    "test": "cd server && yarn test",
+    "heroku-postbuild": "cd server && yarn && cd ../client && yarn && yarn build"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
